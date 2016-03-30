@@ -14,6 +14,7 @@ public class Example4 {
 
 	public static void main(String[] args) {
 		
+		// Find if this one is Tuesday and if not when is next Tuesday
 		LocalDate firstTuesday = LocalDate.of(2016, Month.APRIL, 1).with(
 				TemporalAdjusters.nextOrSame(DayOfWeek.TUESDAY));
 
