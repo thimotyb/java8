@@ -3,10 +3,15 @@ package it.corso.datetime;
 import java.time.Duration;
 import java.time.Instant;
 
+/**
+ * Using Instant and Duration
+ * @author thimoty
+ * 
+ */
 public class Example1 {
 
 	public static void main(String[] args) {
-		
+		 
 		Instant start = Instant.now();
 		runAlgorithm();
 		Instant end = Instant.now();
