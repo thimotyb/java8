@@ -26,7 +26,7 @@ class Manager extends Employee {} // Also @Persistent
 
 public class StandardAnnotations {
     public class Point {
-        // @Override public boolean equals(Point other) { return false; }        
+        //@Override public boolean equals(Point other) { return false; }        
     }
     
     public static <T> T[] nCopies(int n, T value) {
@@ -36,7 +36,7 @@ public class StandardAnnotations {
         return result;
     }
         
-    @Generated(value="com.horstmann.generator", date="2015-01-04T12:08:56.235-0700") String message = null;
+    @Generated(value="it.corso.generator", date="2015-01-04T12:08:56.235-0700") String message = null;
     
     @FunctionalInterface
     public interface IntFunction<R> {
