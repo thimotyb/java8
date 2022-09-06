@@ -1,11 +1,11 @@
 package it.corso.annotations;
 
 /*
-Run these commands:
+Run these commands: (from src folder)
 
-javac com/horstmann/annotations/ToStringAnnotationProcessor.java
-javac -processor com.horstmann.annotations.ToStringAnnotationProcessor ch11/sec05/*.java
-java ch11.sec05.SourceLevelAnnotationDemo
+javac it/corso/annotations/ToStringAnnotationProcessor.java
+javac -processor it.corso.annotations.ToStringAnnotationProcessor it/corso/annotations/*.java
+java it.corso.annotations.SourceLevelAnnotationDemo
     
 */
 

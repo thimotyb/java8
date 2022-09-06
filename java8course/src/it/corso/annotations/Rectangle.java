@@ -9,5 +9,8 @@ public class Rectangle {
         this.topLeft = topLeft;
         this.width = width;
         this.height = height;
-    }        
+    }    
+    public Point topLeft() { return topLeft; }
+    public int width() { return width; }
+    public int height() { return height; }
 }
