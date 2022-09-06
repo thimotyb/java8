@@ -4,6 +4,8 @@ package it.corso.annotations;
 Run these commands: (from src folder)
 
 javac it/corso/annotations/ToStringAnnotationProcessor.java
+javac it/corso/annotations/Rectangle.java
+javac it/corso/annotations/Point.java
 javac -processor it.corso.annotations.ToStringAnnotationProcessor it/corso/annotations/*.java
 java it.corso.annotations.SourceLevelAnnotationDemo
     
