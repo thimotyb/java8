@@ -1,4 +1,4 @@
-package it.corso.localization.sec03;
+package it.corso.localization;
 
 import java.text.NumberFormat;
 import java.util.Currency;

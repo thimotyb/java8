@@ -1,4 +1,4 @@
-package it.corso.localization.sec08;
+package it.corso.localization;
 
 import java.nio.charset.Charset;
 import java.util.Collection;

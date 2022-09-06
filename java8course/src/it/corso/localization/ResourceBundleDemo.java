@@ -1,4 +1,4 @@
-package it.corso.localization.sec07;
+package it.corso.localization;
 
 import java.text.MessageFormat;
 import java.util.Locale;

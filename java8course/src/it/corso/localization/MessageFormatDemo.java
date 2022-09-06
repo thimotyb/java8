@@ -1,4 +1,4 @@
-package it.corso.localization.sec06;
+package it.corso.localization;
 
 import java.text.MessageFormat;
 import java.time.Instant;

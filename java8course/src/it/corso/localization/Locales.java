@@ -1,4 +1,4 @@
-package it.corso.localization.sec01;
+package it.corso.localization;
 
 import java.text.NumberFormat;
 import java.time.LocalDate;

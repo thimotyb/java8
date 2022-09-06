@@ -1,4 +1,4 @@
-package it.corso.localization.sec05;
+package it.corso.localization;
 
 import java.text.Collator;
 import java.text.Normalizer;

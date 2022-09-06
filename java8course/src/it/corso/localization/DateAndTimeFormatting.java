@@ -1,4 +1,4 @@
-package it.corso.localization.sec04;
+package it.corso.localization;
 
 import java.time.LocalTime;
 import java.time.Month;
