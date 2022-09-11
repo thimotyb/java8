@@ -1,4 +1,4 @@
-package it.corso.security;
+package it.corso.security.immutability;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -20,8 +20,6 @@ public class ImmutableList {
 		System.out.println("List using Java 9 List.of() : " + strList.toString());
 		// Unsupported operation on an Immutable Collection
 		strList.add("Addolorato");
-		
-
 		
 	}
 
