@@ -36,6 +36,7 @@ package it.corso.security.immutability;
   * @param favoriteFoods
   */
 	public ImmutableObject(List<String> favoriteFoods) {
+		// Security validation before using the object
 		if (favoriteFoods == null)
 			throw new RuntimeException("favoriteFoods is required");
 		this.favoriteFoods = new ArrayList<String>(favoriteFoods);
@@ -70,7 +71,7 @@ package it.corso.security.immutability;
 * void modifyNotSoImmutableObject() {
      var favorites = new ArrayList<String>();
      favorites.add("Apples");
-     var animal = new Animal(favorites);
+     var animal = new ImmutableObject(favorites);
      System.out.print(animal.getFavoriteFoodsCount());
      favorites.clear();
      System.out.print(animal.getFavoriteFoodsCount());
