@@ -12,8 +12,11 @@ public class ResourceBundleDemo {
         
         Locale.setDefault(Locale.Category.DISPLAY, Locale.forLanguageTag("en"));
         Locale.setDefault(Locale.Category.FORMAT, Locale.forLanguageTag("fr-FR"));
+        // Change here to use specific locale
         // Locale locale = Locale.forLanguageTag("fr-FR");
-        ResourceBundle res = ResourceBundle.getBundle("it.corso.localization.sec07.messages");
+        // ResourceBundle res = ResourceBundle.getBundle("it.corso.localization.messages", locale);
+        // Uses current system default locale
+        ResourceBundle res = ResourceBundle.getBundle("it.corso.localization.messages");
         String priceTemplate = res.getString("price");
         System.out.println(MessageFormat.format(priceTemplate, 19.95));
         System.out.println(res.getString("greeting"));
