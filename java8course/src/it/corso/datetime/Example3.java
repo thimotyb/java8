@@ -15,15 +15,17 @@ public class Example3 {
 
 	public static void main(String[] args) {
 		
-		LocalDate today = LocalDate.now(); // Today’s date
+		LocalDate today = LocalDate.now(); // Todayï¿½s date
 		LocalDate alonzosBirthday = LocalDate.of(1903, 6, 14);
 		alonzosBirthday = LocalDate.of(1903, Month.JUNE, 14);
 		// Uses the Month enumeration
 		
 		// Period
 		LocalDate birthday = LocalDate.of(1973, Month.MAY, 11);
-		birthday.plus(Period.ofYears(1));
+		LocalDate nextBirthday = birthday.plus(Period.ofYears(1)); // Immutable methods!
 		birthday.plusYears(1);
+		System.out.println("****"+birthday);
+		System.out.println("****"+nextBirthday);
 		
 		// Until
 		LocalDate liberationDay = LocalDate.of(2016, Month.APRIL, 25);
@@ -34,8 +36,8 @@ public class Example3 {
 		System.out.println(days);
 		
 		// Potential non-existent dates?
-		// LocalDate.of(2016, 1, 31).plusMonths(1)
-		// LocalDate.of(2016, 3, 31).minusMonths(1)
+		LocalDate.of(2016, 1, 31).plusMonths(1);
+		LocalDate.of(2016, 3, 31).minusMonths(1);
 		
 		// DayOfWeek.MONDAY has the numerical value 1
 		LocalDate.of(1900, 1, 1).getDayOfWeek().getValue();
