@@ -43,11 +43,15 @@ class MyNameComp implements Comparator<Empl>{
         return e1.getName().compareTo(e2.getName());
     }
 }
- 
+
+// This comparator is wrong because it does not specify equality, this has an impact on search
 class MySalaryComp implements Comparator<Empl>{
  
     @Override
     public int compare(Empl e1, Empl e2) {
+    	/*if(e1.getSalary() == e2.getSalary()){
+            return 0;
+        }*/
         if(e1.getSalary() > e2.getSalary()){
             return 1;
         } else {
@@ -56,7 +60,7 @@ class MySalaryComp implements Comparator<Empl>{
     }
 }
  
-class Empl{
+class Empl {
      
     private String name;
     private int salary;
@@ -81,4 +85,5 @@ class Empl{
     public String toString(){
         return "Name: "+this.name+"-- Salary: "+this.salary;
     }
+
 }

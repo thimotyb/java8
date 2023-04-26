@@ -21,8 +21,8 @@ public class Example5 {
 		if (i1!=i2) System.out.println("different objects");
 		if (i1.equals(i2)) System.out.println("meaningfully equals");
 		
-		Integer i3 = 10;
-		Integer i4 = 10;
+		Integer i3 = 126; // 129
+		Integer i4 = 126; // 129
 		if (i3==i4) System.out.println("same object");
 		if (i3!=i4) System.out.println("different objects");		
 		if (i3.equals(i4)) System.out.println("meaningfully equals");

@@ -16,16 +16,16 @@ public class AsyncFileChannelFuture {
 
 	public static void main(String[] args) {
 		
-		var file = Path.of("src/it/corso/nio2/file/foobar.txt");
+		Path file = Path.of("src/it/corso/nio2/file/foobar.txt");
 
-		try (var channel =
+		try (AsynchronousFileChannel channel =
 		  AsynchronousFileChannel.open(file)) {
-		    var buffer = ByteBuffer.allocate(100);
+			ByteBuffer buffer = ByteBuffer.allocate(100);
 		    Future<Integer> result = channel.read(buffer, 0);
 
 		    // BusinessProcess.doSomethingElse();
 
-		    var bytesRead = result.get();
+		    int bytesRead = result.get();
 		    System.out.println("Bytes read [" + bytesRead + "]");
 		    //
 		    System.out.println(result);

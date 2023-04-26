@@ -15,11 +15,11 @@ public class AsyncFileChannelCallback {
 
 	public static void main(String[] args) {
 		
-		var file = Path.of("src/it/corso/nio2/file/foobar.txt");
+		Path file = Path.of("src/it/corso/nio2/file/foobar.txt");
 
-		try (var channel = AsynchronousFileChannel.open(file)) {
-		    var buffer = ByteBuffer.allocate(100);
-		    var handler = new CompletionHandler<Integer, ByteBuffer>() {
+		try (AsynchronousFileChannel channel = AsynchronousFileChannel.open(file)) {
+			ByteBuffer buffer = ByteBuffer.allocate(100);
+			CompletionHandler handler = new CompletionHandler<Integer, ByteBuffer>() {
 		        public void completed(Integer result,
 		            ByteBuffer attachment) {
 		            System.out.println("Bytes read [" + result + "]");
