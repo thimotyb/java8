@@ -64,16 +64,40 @@ class AnimalDoctor {
 			doc.readAnimal(myAlDog);
 			doc.readAnimal(myAlCat);
 			
+			List myObjectList = new ArrayList();
+			myObjectList.add(new Bird());
+			myObjectList.add(5);
+			
+			doc.printListWildCard(myAlCat);
+			doc.printListWildCard(myAlDog);
+			doc.printListWildCard(myObjectList);
+			
+			doc.addAnimal(myAlDog);
+			// doc.addAnimal(myAlCat); // NO! Only dog collections
+			
+			
 		}
 		
-		public void readAnimal(List<? extends Animal> animals) {
+		public void addAnimal(List<? super Dog> animals) {
+			animals.add(new Dog());
+		}
+		
+		public void readAnimal(List<? extends Animal> animals) {  // Read Only! Method Invocation Only!!!
 			for (Animal a : animals) {
-				a.checkup();
-			}
+				a.checkup(); // Dynamic binding
+			}			
 		}
 
+		public void printListWildCard(List<?> /*List<Object>*/ mylist) {
+			for (Object element : mylist) {
+				if (element instanceof Animal) ((Animal)element).checkup();
+				System.out.println("#####"+(element instanceof Bird));
+			}
+			//mylist.add(4);
+		}
+		
 		
 		public void addAnimal(Animal[] animals) {
-			animals[0] = new Dog(); // Eeek.We just put a Dog  in a Cat array!
+			animals[0] = new Dog(); // Eeek.We just put a Dog  in a Cat array! (ArrayStoreException)
 		}
 }

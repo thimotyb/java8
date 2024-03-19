@@ -49,9 +49,9 @@ class MySalaryComp implements Comparator<Empl>{
  
     @Override
     public int compare(Empl e1, Empl e2) {
-    	/*if(e1.getSalary() == e2.getSalary()){
+    	if(e1.getSalary() == e2.getSalary()){
             return 0;
-        }*/
+        }
         if(e1.getSalary() > e2.getSalary()){
             return 1;
         } else {
@@ -82,6 +82,8 @@ class Empl {
     public void setSalary(int salary) {
         this.salary = salary;
     }
+    
+    @Override
     public String toString(){
         return "Name: "+this.name+"-- Salary: "+this.salary;
     }
