@@ -26,6 +26,11 @@ public class Example5 {
 		if (i3==i4) System.out.println("same object");
 		if (i3!=i4) System.out.println("different objects");		
 		if (i3.equals(i4)) System.out.println("meaningfully equals");
+		
+		Boolean b1 = true;
+		Boolean b2 = true;
+		System.out.println(b1 == b2);
+		System.out.println(b1.equals(b2));
 
 	}
 

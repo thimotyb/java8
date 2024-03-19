@@ -1,5 +1,9 @@
 package it.corso.collections;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 /**
  * Demonstrates polymorphism in a regular typed array
  * 
@@ -12,7 +16,7 @@ abstract class Animal {
 
 class Dog extends Animal {
 	public void checkup() { // implement Dog-specific code
-		System.out.println("Doq checkup");
+		System.out.println("Dog checkup");
 	}
 }
 
@@ -34,7 +38,7 @@ class AnimalDoctor {
 		for (Animal a : animals) {
 			a.checkup();
 		}
-}
+    }
 
 		public static void main(String[] args) {
 			// test it
@@ -45,5 +49,31 @@ class AnimalDoctor {
 			doc.checkAnimals(dogs); // pass the Dog[]
 			doc.checkAnimals(cats); // pass the Cat [)
 			doc.checkAnimals(birds); // pass the Bird[]
+			
+			Animal[] myAnimals = cats;
+			
+			ArrayList<Animal> a1 = new ArrayList<>();
+			ArrayList<Dog> d1 = new ArrayList<>();
+			
+			//a1 = d1;
+			
+			//doc.addAnimal(cats);
+			List<Dog> myAlDog = Arrays.asList(dogs);
+			List<Cat> myAlCat = Arrays.asList(cats);
+			System.out.println("***********************");
+			doc.readAnimal(myAlDog);
+			doc.readAnimal(myAlCat);
+			
+		}
+		
+		public void readAnimal(List<? extends Animal> animals) {
+			for (Animal a : animals) {
+				a.checkup();
+			}
+		}
+
+		
+		public void addAnimal(Animal[] animals) {
+			animals[0] = new Dog(); // Eeek.We just put a Dog  in a Cat array!
 		}
 }
