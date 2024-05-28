@@ -1,4 +1,4 @@
-package it.corso.concurrency.blockingqueue;
+package it.corso.concurrency.blockingqueue.bqnozombie;
 
 public class Message {
     private String msg;
