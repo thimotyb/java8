@@ -1,4 +1,4 @@
-package it.corso.concurrency.blockingqueue;
+package it.corso.concurrency.blockingqueue.bqnozombie;
 
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.BlockingQueue;
