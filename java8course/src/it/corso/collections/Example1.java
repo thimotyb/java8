@@ -20,6 +20,12 @@ class Dog extends Animal {
 	}
 }
 
+class Poodle extends Dog {
+	public void checkup() { // implement Dog-specific code
+		System.out.println("Poodle checkup");
+	}
+}
+
 class Cat extends Animal {
 	public void checkup() { // implement Cat-specific cede
 		System.out.println("Cat checkup");
@@ -45,6 +51,7 @@ class AnimalDoctor {
 			Dog[] dogs = { new Dog(), new Dog() };
 			Cat[] cats = { new Cat(), new Cat(), new Cat() };
 			Bird[] birds = { new Bird() };
+			Poodle[] poodles = { new Poodle() } ; 
 			AnimalDoctor doc = new AnimalDoctor();
 			doc.checkAnimals(dogs); // pass the Dog[] 
 			doc.checkAnimals(cats); // pass the Cat [)
@@ -61,6 +68,7 @@ class AnimalDoctor {
 			// doc.addAnimal(cats);
 			List<Dog> myAlDog = Arrays.asList(dogs);
 			List<Cat> myAlCat = Arrays.asList(cats);
+			List<Poodle> myAlPoodle = Arrays.asList(poodles);
 			System.out.println("***********************");
 			doc.readAnimal(myAlDog);
 			doc.readAnimal(myAlCat);
@@ -76,12 +84,14 @@ class AnimalDoctor {
 			doc.addAnimal(myAlDog);
 			doc.addAnimal(a1); // I can send superclasses of Dogs (Animal)
 			//doc.addAnimal(myAlCat); // NO! Only dog collections
+			//doc.addAnimal(myAlPoodle); // NO! Only dog collegctions (but I can add a Poodle to a List<Dog>)
 			
 			
 		}
 		
 		public void addAnimal(List<? super Dog> animals) {  // ALlows me to read, and "write" only Dogs or children of Dogs
 			animals.add(new Dog());
+			animals.add(new Poodle()); // I can add a subclass of Dog
 		}
 		
 		public void readAnimal(List<? extends Animal> animals) {  // Read Only! Method Invocation Only!!!
