@@ -46,18 +46,19 @@ class AnimalDoctor {
 			Cat[] cats = { new Cat(), new Cat(), new Cat() };
 			Bird[] birds = { new Bird() };
 			AnimalDoctor doc = new AnimalDoctor();
-			doc.checkAnimals(dogs); // pass the Dog[]
+			doc.checkAnimals(dogs); // pass the Dog[] 
 			doc.checkAnimals(cats); // pass the Cat [)
 			doc.checkAnimals(birds); // pass the Bird[]
 			
 			Animal[] myAnimals = cats;
+			System.out.println(myAnimals);
 			
 			ArrayList<Animal> a1 = new ArrayList<>();
 			ArrayList<Dog> d1 = new ArrayList<>();
 			
 			//a1 = d1;
 			
-			//doc.addAnimal(cats);
+			// doc.addAnimal(cats);
 			List<Dog> myAlDog = Arrays.asList(dogs);
 			List<Cat> myAlCat = Arrays.asList(cats);
 			System.out.println("***********************");
@@ -73,18 +74,19 @@ class AnimalDoctor {
 			doc.printListWildCard(myObjectList);
 			
 			doc.addAnimal(myAlDog);
-			// doc.addAnimal(myAlCat); // NO! Only dog collections
+			doc.addAnimal(a1); // I can send superclasses of Dogs (Animal)
+			//doc.addAnimal(myAlCat); // NO! Only dog collections
 			
 			
 		}
 		
-		public void addAnimal(List<? super Dog> animals) {
+		public void addAnimal(List<? super Dog> animals) {  // ALlows me to read, and "write" only Dogs or children of Dogs
 			animals.add(new Dog());
 		}
 		
 		public void readAnimal(List<? extends Animal> animals) {  // Read Only! Method Invocation Only!!!
 			for (Animal a : animals) {
-				a.checkup(); // Dynamic binding
+				a.checkup(); // Dynamic binding				
 			}			
 		}
 
